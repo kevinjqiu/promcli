@@ -4,6 +4,8 @@ import (
 "log"
 "github.com/prometheus/prometheus/storage"
 "github.com/prometheus/prometheus/util/testutil"
+	"time"
+	"golang.org/x/net/context"
 )
 
 type TestCommand = testCommand
@@ -36,6 +38,8 @@ func ExecuteTestCommand(tc TestCommand, storage *storage.Storage) (*storage.Stor
 		storage: *storage,
 		cmds: []TestCommand{tc},
 	}
+	t.queryEngine = NewEngine(nil, nil, 20, 10*time.Second)
+	t.context, t.cancelCtx = context.WithCancel(context.Background())
 	return &t.storage, t.exec(tc)
 }
 
