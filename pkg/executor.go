@@ -81,7 +81,7 @@ func Executor(input string) {
 	switch {
 	case input == "clear": handleClear(input)
 	case strings.HasPrefix(input, "load"): handleLoad(input)
-	case strings.HasPrefix(input, "eval"): handleEval(input) // TODO: promql.test's eval evaluates against expectations. We need it to display the result of an evaluation.
+	case strings.HasPrefix(input, "eval"): handleEval(input)
 	case input == "": handleEmptyLine(input)
 	default: handleOther(input)
 	}
