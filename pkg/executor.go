@@ -78,12 +78,15 @@ func handleOther(input string) {
 }
 
 func handleHelp(input string) {
-	Help()
+	tokens := strings.Split(input, " ")
+	if len(tokens) == 1 {
+		Help()
+	}
 }
 
 func Executor(input string) {
 	switch {
-	case input == "help": handleHelp(input)
+	case strings.HasPrefix(input, "help"): handleHelp(input)
 	case input == "clear": handleClear(input)
 	case strings.HasPrefix(input, "load"): handleLoad(input)
 	case strings.HasPrefix(input, "eval"): handleEval(input)
