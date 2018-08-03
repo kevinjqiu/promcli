@@ -9,7 +9,6 @@ import (
 const (
 	StateCommand = iota
 	StateLoad
-	StateEval
 )
 
 var ApplicationState struct {
@@ -53,17 +52,11 @@ func handleLoad(input string) {
 }
 
 func handleEval(input string) {
-	if ApplicationState.state == StateEval {
-		fmt.Println("Already in Eval state")
-		return
-	}
-	ApplicationState.state = StateEval
-	ApplicationState.buffer = append(ApplicationState.buffer, input)
-	return
+	execute(input)
 }
 
-func handleEmptyLine(input string) {
-	if ApplicationState.state == StateLoad || ApplicationState.state == StateEval {
+func handleEmptyLine(_ string) {
+	if ApplicationState.state == StateLoad {
 		lines := strings.Join(ApplicationState.buffer, "\n")
 		execute(lines)
 		ApplicationState.buffer = make([]string, 0)
@@ -72,7 +65,7 @@ func handleEmptyLine(input string) {
 }
 
 func handleOther(input string) {
-	if ApplicationState.state == StateLoad || ApplicationState.state == StateEval {
+	if ApplicationState.state == StateLoad {
 		ApplicationState.buffer = append(ApplicationState.buffer, input)
 	}
 }

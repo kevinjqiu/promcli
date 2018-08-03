@@ -62,8 +62,7 @@ Evaluate a PromQL expression at "instant" on the current set of metrics fixtures
 
 e.g.,
 
-	eval instant at 0m http_requests{status_code="200"}
-`
+	eval instant at 0m http_requests{status_code="200"}`
 	HelpClear = `
 clear
 -----

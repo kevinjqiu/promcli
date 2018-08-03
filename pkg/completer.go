@@ -44,11 +44,6 @@ func completeMetrics(d prompt.Document) []prompt.Suggest {
 	return []prompt.Suggest{}
 }
 
-func completeExpectations(d prompt.Document) []prompt.Suggest {
-	// TODO: complete against the metrics in the current session
-	return []prompt.Suggest{}
-}
-
 func Completer(d prompt.Document) []prompt.Suggest {
 	// w := d.GetWordBeforeCursorWithSpace()
 	w := d.TextBeforeCursor()
@@ -72,8 +67,6 @@ func Completer(d prompt.Document) []prompt.Suggest {
 			return prompt.FilterHasPrefix(s, d.GetWordBeforeCursor(), true)
 		}
 		return []prompt.Suggest{}
-	case StateEval:
-		return completeExpectations(d)
 	case StateLoad:
 		return completeMetrics(d)
 	}
