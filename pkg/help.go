@@ -43,14 +43,14 @@ You are also able to give a metric multiple values, e.g.,
 This will generate the following metric values:
 
    value
-	^
+    ^
   4 |                   x
   3 |              x----|
   2 |         x----|
   1 |    x----|
-	0----|----|----|----|--------> time
-		 v    v    v    v
-		 5m  10m  15m  20m
+    0----|----|----|----|--------> time
+         v    v    v    v
+         5m  10m  15m  20m
 "`
 	HelpEval = `
 eval instant at <instant:duration> <expr>

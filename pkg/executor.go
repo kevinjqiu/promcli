@@ -80,7 +80,9 @@ func handleOther(input string) {
 func handleHelp(input string) {
 	tokens := strings.Split(input, " ")
 	if len(tokens) == 1 {
-		Help()
+		Help("")
+	} else {
+		Help(tokens[1])
 	}
 }
 

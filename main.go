@@ -15,7 +15,7 @@ const Banner = `
 
 func main() {
 	fmt.Println(Banner)
-	pkg.Help()
+	pkg.Help("")
 	p := prompt.New(
 		pkg.Executor,
 		pkg.Completer,
