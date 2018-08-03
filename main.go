@@ -4,8 +4,7 @@ import (
 	"github.com/c-bata/go-prompt"
 	"github.com/kevinjqiu/promcli/pkg"
 	"fmt"
-	"github.com/prometheus/prometheus/promql"
-)
+	)
 
 const Banner = `
  ____                       ____ _     ___ 
@@ -16,8 +15,7 @@ const Banner = `
 
 
 func executor(input string) {
-	storage := promql.NewTestStorage()
-	pkg.Executor(input, storage)
+	pkg.Executor(input)
 }
 
 func main() {
