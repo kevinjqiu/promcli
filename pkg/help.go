@@ -67,14 +67,18 @@ e.g.,
 clear
 -----
 
-Reset the database and remove all metrics fixtures previously loaded.`)
+Reset the database and remove all metrics fixtures previously loaded.`
+)
 
 func Help(topic string) {
-	switch (topic) {
-	case "load": fmt.Println(HelpLoad)
-	case "eval": fmt.Println(HelpEval)
-	case "clear": fmt.Println(HelpClear)
-	default: fmt.Println(HelpSummary)
+	switch topic {
+	case "load":
+		fmt.Println(HelpLoad)
+	case "eval":
+		fmt.Println(HelpEval)
+	case "clear":
+		fmt.Println(HelpClear)
+	default:
+		fmt.Println(HelpSummary)
 	}
 }
-

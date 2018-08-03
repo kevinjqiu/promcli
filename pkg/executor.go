@@ -1,9 +1,9 @@
 package pkg
 
 import (
-		"strings"
 	"fmt"
 	"github.com/prometheus/prometheus/promql"
+	"strings"
 )
 
 const (
@@ -12,7 +12,7 @@ const (
 )
 
 var ApplicationState struct {
-	state int
+	state  int
 	buffer []string
 }
 
@@ -81,12 +81,17 @@ func handleHelp(input string) {
 
 func Executor(input string) {
 	switch {
-	case strings.HasPrefix(input, "help"): handleHelp(input)
-	case input == "clear": handleClear(input)
-	case strings.HasPrefix(input, "load"): handleLoad(input)
-	case strings.HasPrefix(input, "eval"): handleEval(input)
-	case input == "": handleEmptyLine(input)
-	default: handleOther(input)
+	case strings.HasPrefix(input, "help"):
+		handleHelp(input)
+	case input == "clear":
+		handleClear(input)
+	case strings.HasPrefix(input, "load"):
+		handleLoad(input)
+	case strings.HasPrefix(input, "eval"):
+		handleEval(input)
+	case input == "":
+		handleEmptyLine(input)
+	default:
+		handleOther(input)
 	}
 }
-
