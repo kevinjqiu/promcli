@@ -12,6 +12,7 @@ This allows users to manually add metrics and evaluate PromQL expressions agains
 Demo
 ====
 
+![Demo](demo/demo.svg)
 [![asciicast](https://asciinema.org/a/WSsYo9Yo5UP3RubRyLqJyjV0Y.png)](https://asciinema.org/a/WSsYo9Yo5UP3RubRyLqJyjV0Y)
 
 
