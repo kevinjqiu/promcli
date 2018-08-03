@@ -62,9 +62,10 @@ func Completer(d prompt.Document) []prompt.Suggest {
 			return completeLoad(d)
 		default:
 			s := []prompt.Suggest{
+				{Text: "help", Description: "Show help message"},
 				{Text: "clear", Description: "Clear the database"},
-				{Text: "load", Description: "Enter the fixture loading state.  load <step:duration>"},
-				{Text: "eval instant at", Description: "Evaluate expressions.  eval instant at <step:duration> <metric>"},
+				{Text: "load", Description: "Load fixtures with step.  \nload <step:duration>"},
+				{Text: "eval instant at", Description: "Evaluate PromQL expressions.  eval instant at <step:duration> <expression>"},
 				//{Text: "eval_fail", Description: "Evaluate expressions"},
 				//{Text: "eval_ordered", Description: "Evaluate expressions"},
 			}
