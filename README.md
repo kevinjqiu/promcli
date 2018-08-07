@@ -14,6 +14,13 @@ Demo
 
 ![Demo](demo/demo.svg)
 
+Try it
+======
+
+Easiest way to try it is with [docker](https://docker.io):
+
+    docker run -it kevinjqiu/promcli
+
 Install
 =======
 
