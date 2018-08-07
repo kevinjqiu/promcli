@@ -1,1 +1,1 @@
-/home/kevin/src/gopath/src/github.com/kevinjqiu/promcli/_proxy/proxy.go
+/home/kevin.qiu/.gopath/src/github.com/kevinjqiu/promcli/_proxy/proxy.go

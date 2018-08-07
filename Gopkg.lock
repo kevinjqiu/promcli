@@ -21,10 +21,7 @@
 
 [[projects]]
   name = "github.com/go-kit/kit"
-  packages = [
-    "log",
-    "log/level"
-  ]
+  packages = ["log","log/level"]
   revision = "ca4112baa34cb55091301bdc13b1420a122b1b9e"
   version = "v0.7.0"
 
@@ -90,10 +87,7 @@
 
 [[projects]]
   name = "github.com/opentracing/opentracing-go"
-  packages = [
-    ".",
-    "log"
-  ]
+  packages = [".","log"]
   revision = "1949ddbfd147afd4d964a9f00b24eb291e0e7c38"
   version = "v1.0.2"
 
@@ -124,52 +118,25 @@
 [[projects]]
   branch = "master"
   name = "github.com/prometheus/common"
-  packages = [
-    "expfmt",
-    "internal/bitbucket.org/ww/goautoneg",
-    "model"
-  ]
+  packages = ["expfmt","internal/bitbucket.org/ww/goautoneg","model"]
   revision = "7600349dcfe1abd18d72d3a1770870d9800a7801"
 
 [[projects]]
   branch = "master"
   name = "github.com/prometheus/procfs"
-  packages = [
-    ".",
-    "internal/util",
-    "nfs",
-    "xfs"
-  ]
+  packages = [".","internal/util","nfs","xfs"]
   revision = "05ee40e3a273f7245e8777337fc7b46e533a9a92"
 
 [[projects]]
   name = "github.com/prometheus/prometheus"
-  packages = [
-    "pkg/labels",
-    "pkg/textparse",
-    "pkg/timestamp",
-    "pkg/value",
-    "promql",
-    "storage",
-    "storage/tsdb",
-    "util/stats",
-    "util/strutil",
-    "util/testutil"
-  ]
+  packages = ["pkg/labels","pkg/textparse","pkg/timestamp","pkg/value","promql","storage","storage/tsdb","util/stats","util/strutil","util/testutil"]
   revision = "71af5e29e815795e9dd14742ee7725682fa14b7b"
   version = "v2.3.2"
 
 [[projects]]
   branch = "master"
   name = "github.com/prometheus/tsdb"
-  packages = [
-    ".",
-    "chunkenc",
-    "chunks",
-    "fileutil",
-    "index",
-    "labels"
-  ]
+  packages = [".","chunkenc","chunks","fileutil","index","labels"]
   revision = "99a2c4314ff70f0673c0d07b512e2ea7a715889e"
 
 [[projects]]
@@ -193,6 +160,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "2bd1d1c153884d40afc18150702a9dc398715742f3de478fea721e7dd28665e2"
+  inputs-digest = "7f8f26bd5be7d93b07a77e394a1f89ce07a3c241f9260d8f46821a86eb7ac1e2"
   solver-name = "gps-cdcl"
   solver-version = 1
